@@ -1,0 +1,168 @@
+.programs {
+    width: 100%;
+}
+
+.programs .programs-content {
+    width: 100%;
+}
+
+.programs .programs-title h1 {
+    width: 30%;
+}
+
+.programs .programs-title p {
+    width: 40%;
+    align-self: flex-end;
+}
+
+.programs .programs-content img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.programs .programs-content .subTitle {
+    height: 52px;
+}
+
+/* test pages */
+
+.testContent {
+    width: 100%;
+    padding: 0 25%;
+}
+
+.testContent .notes .bar {
+    width: 8px;
+    height: 100%;
+    background-color: var(--action-color);
+}
+
+.testContent .notes p {
+    padding: 8px;
+    background-color: var(--bcd-accent-1);
+    font-weight: var(--fw-light);
+}
+
+.testContent .progressBar .bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--bcd-color-sec);
+    border-radius: 8px;
+}
+
+.testContent .progressBar .indicator {
+    width: 5%;
+    height: 8px;
+    background-color: var(--action-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.testContent .questions {
+    width: 100%;
+    padding: 24px;
+    border-radius: 40px;
+    background-color: var(--bcd-color-main);
+    border: 1px solid var(--action-color);
+}
+
+/* test result */
+.testContent .testResult {
+    width: 100%;
+    background-color: var(--bcd-color-main);
+    box-shadow: 4px 8px 25px rgba(147, 147, 147, 0.1),
+        4px 8px 40px rgba(187, 187, 187, 0.05),
+        4px 8px 25px rgba(187, 187, 187, 0.05);
+    /* border: 1px solid var(--action-color); */
+    padding: 40px;
+    border-radius: 40px;
+    box-sizing: border-box;
+}
+
+.testContent .testResult .profile {
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: var(--bcd-color-main);
+    border: 1px solid var(--bcd-color-sec);
+}
+
+
+.testContent .testResult .profile .userProfile {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.testContent .testResult .profile .userProfile.one {
+    background-image: url("../assets/profile_level_1.png");
+}
+
+.testContent .testResult .profile .userProfile.two {
+    background-image: url("../assets/profile_level_2.png");
+}
+
+.testContent .testResult .profile .userProfile.three {
+    background-image: url("../assets/profile_level_3.png");
+}
+
+.testContent .testResult .profile .detail {
+    width: 80%;
+}
+
+.testContent .testResult .summary {
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+.testContent .testResult .summary .label {
+    color: var(--text-color-sec);
+}
+
+
+.testContent .testResult .recommendation {
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-image: var(--bcd-linear);
+}
+
+.testContent .testResult .recommendation ul li {
+    margin: 0 24px;
+}
+
+/* responsive mobile */
+@media screen and (max-width: 576px) {
+
+    .programs .programs-title,
+    .programs .programs-list {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+
+    .programs .programs-title h1,
+    .programs .programs-title p {
+        width: 100%;
+    }
+
+    .testContent {
+        padding: 0 5%;
+    }
+
+    .testContent .testResult {
+        padding: 12px;
+        border-radius: 32px;
+    }
+}

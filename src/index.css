@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+:root {
+  --fs-heading-1: 40px;
+  --fs-heading-2: 32px;
+  --fs-heading-3: 24px;
+  --fs-body: 16px;
+  --fs-body-small: 12px;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
+  --fw-extra-light: 200;
+}
+
+/* layouts & colors */
+.container {
+  width: 100%;
+  height: 100dvh;
+  padding-top: 72px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--bcd-color-main);
+  color: var(--text-color-main);
+  overflow-x: hidden;
+}
+
+.container .content-area {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: max-content;
+}
+
+.container-light {
+  /* text */
+  --text-color-main: #222;
+  --text-color-sec: #888;
+  --text-color-opposite: #f5f5f5;
+  --action-color: #486AFF;
+  --accept-color: #0d9e17;
+  --warning-color: #dc2929;
+  --alert-color: #bc843b;
+  --disactive-color: #e6e6e6;
+  /* background */
+  --bcd-color-main: #FFFFFA;
+  --bcd-color-blur: rgba(255, 255, 250, 0.7);
+  --bcd-color-sec: #F2F2F2;
+  --bcd-color-third: #eef8f7;
+  --bcd-accent-1: #F0F7FF;
+  --bcd-accent-2: #FFEFEF;
+  --bcd-linear: linear-gradient(125deg, #FFFEF2, #E4EFFF);
+}
+
+.container-dark {
+  /* text */
+  --text-color-main: #eeeeee;
+  --text-color-sec: #aaa;
+  --text-color-opposite: #f5f5f5;
+  --action-color: #007979;
+  --accept-color: #4c8740;
+  --warning-color: #d90f0f;
+  --alert-color: #f0ffab;
+  --disactive-color: #555555;
+  /* background */
+  --bcd-color-main: #121213;
+  --bcd-color-blur: rgba(18, 18, 19, 0.2);
+  --bcd-color-sec: #141924;
+  --bcd-color-third: #3b404a;
+  --bcd-accent-1: #2d3f54;
+  --bcd-accent-2: #642222;
+  --bcd-linear: linear-gradient(125deg, #0086c5, #0f093d);
+}
+
+/* gap and spacings */
+.spacing-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacing-wrap {
+  flex-wrap: wrap;
+}
+
+.spacing-col-center {
+  justify-content: center;
+}
+
+.spacing-col-justify {
+  justify-content: space-between;
+}
+
+.spacing-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.spacing-row-center {
+  align-items: center;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+/* default tag styling */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--fs-heading-1);
+  font-weight: var(--fw-light);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: var(--fs-heading-2);
+  font-weight: var(--fw-semibold);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: var(--fs-heading-3);
+  font-weight: var(--fw-semibold);
+  text-transform: capitalize;
+}
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.fs-small {
+  font-size: var(--fs-body-small);
+}
+
+.fw-light {
+  font-weight: var(--fw-light);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+/* icons template */
+.icons-small {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: inherit;
+  font-size: 18px;
+}
+
+.icons-large {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: inherit;
+  font-size: 24px;
+}
+
+.chips {
+  width: max-content;
+  height: 32px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid var(--bcd-color-third);
+  font-size: var(--fs-body-small);
+  transition: 0.2s ease-in;
+}
+
+.chips:hover {
+  background-color: var(--bcd-color-sec);
+}
+
+/* responsive tablet */
+@media screen and (max-width: 1024px) {
+  .container .content-area {
+    padding: 0 5%;
+  }
+}
+
+/* responsive mobile */
+@media screen and (max-width: 576px) {
+  :root {
+    --fs-heading-1: 32px;
+    --fs-heading-2: 24px;
+    --fs-heading-3: 20px;
+  }
+
+  .container .content-area {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

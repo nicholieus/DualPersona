@@ -1,0 +1,416 @@
+/* button styling */
+button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.small {
+  height: 24px;
+  padding: 4px 8px;
+  font-size: var(--fs-body-small);
+}
+
+button.regular {
+  height: 32px;
+  padding: 4px 8px;
+  font-size: var(--fs-body);
+}
+
+button.large {
+  height: 40px;
+  padding: 8px 16px;
+  font-size: var(--fs-body);
+}
+
+/* button width */
+button.maxContent {
+  width: max-content;
+}
+
+button.fillContent {
+  width: 100%;
+}
+
+/* button rounded */
+button.small-rounded {
+  border-radius: 4px;
+}
+
+button.regular-rounded {
+  border-radius: 8px;
+}
+
+button.large-rounded {
+  border-radius: 30px;
+}
+
+/* button variant */
+button.primary,
+button.tertiary:hover {
+  background-color: var(--action-color);
+  border: 1px solid var(--action-color);
+  color: var(--text-color-opposite);
+}
+
+button.secondary {
+  background-color: var(--disactive-color);
+  color: var(--text-color-sec);
+}
+
+button.tertiary {
+  background-color: transparent;
+  color: var(--text-color-sec);
+  border: 1px solid var(--text-color-sec);
+}
+
+button.whatsapp {
+  background-color: var(--accept-color);
+  color: var(--text-color-opposite);
+}
+
+button.btn-icons {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: var(--bcd-color-third);
+  color: var(--text-color-sec);
+  position: relative;
+  transition: 0.25s ease;
+}
+
+button.btn-icons:hover {
+  background-color: var(--action-color);
+  color: var(--text-color-opposite);
+}
+
+button.btn-icons:hover span {
+  opacity: 1;
+  visibility: visible;
+  bottom: -32px;
+}
+
+button.btn-icons span {
+  width: max-content;
+  font-size: var(--fs-body-small);
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: var(--bcd-color-sec);
+  border: 1px solid var(--bcd-color-third);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--fs-body-small);
+  color: var(--text-color-sec);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: 0.25s ease-in;
+}
+
+/* form styling */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form .input-group {
+  width: 100%;
+  gap: 2px;
+}
+
+form .btn-group {
+  width: 100%;
+}
+
+form .input-group label {
+  padding: 0 8px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-sec);
+  text-transform: capitalize;
+}
+
+form .input-group .error-msg {
+  padding: 0 8px;
+  font-size: var(--fs-body-small);
+  color: var(--warning-color);
+}
+
+/* form inputs */
+form .input-group input {
+  width: 100%;
+  height: 32px;
+  outline: 0;
+  border: 1px solid var(--disactive-color);
+  background-color: var(--bcd-color-sec);
+  padding: 0 8px;
+  border-radius: 8px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-main);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+form .input-group input::placeholder {
+  color: var(--text-color-sec);
+  font-size: var(--fs-body-small);
+}
+
+/* form date */
+.container-dark input[type="date"]::-webkit-calendar-picker-indicator {
+  color-scheme: dark;
+}
+
+/* form files */
+form .input-group input[type="file"]::file-selector-button {
+  width: max-content;
+  height: 24px;
+  margin: 4px 0;
+  color: var(--text-color-sec);
+  font-size: var(--fs-body-small);
+  background-color: var(--bcd-color-third);
+  border: 1px solid var(--disactive-color);
+  border-radius: 4px;
+}
+
+/* form date */
+form .input-group input[type="date"]::-webkit-calendar-picker-indicator {
+  color: var(--text-color-sec);
+  background-color: var(--bcd-color-sec);
+  cursor: pointer;
+}
+
+/* input checkbox */
+form .input-group .input-check {
+  font-size: var(--fs-body-small);
+  color: var(--text-color-sec);
+}
+
+form .input-group .input-check.active,
+form .input-group .input-check.active label {
+  color: var(--action-color);
+}
+
+form .input-group .input-check .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-body);
+  cursor: pointer;
+}
+
+/* form select */
+
+form .input-group select {
+  width: 100%;
+  height: 32px;
+  outline: 0;
+  border: 1px solid var(--disactive-color);
+  background-color: var(--bcd-color-sec);
+  padding: 0 8px;
+  border-radius: 8px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-main);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  appearance: base-select;
+}
+
+form .input-group select::picker-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-sec);
+  font-size: var(--fs-body);
+  transition: 150ms ease;
+  content: "▴";
+}
+
+form .input-group select:open::picker-icon {
+  rotate: 180deg;
+}
+
+form .input-group ::picker(select) {
+  appearance: base-select;
+  border: 1px solid var(--disactive-color);
+  background-color: var(--bcd-color-sec);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-main);
+  box-sizing: border-box;
+  appearance: base-select;
+  margin-top: 8px;
+}
+
+form .input-group option {
+  transition: 0.2s ease;
+}
+
+form .input-group option:first-child:hover {
+  padding: 0;
+  font-size: var(--fs-body-small);
+  background-color: var(--bcd-color-sec);
+  cursor: default;
+}
+
+form .input-group option:hover {
+  padding: 0 8px;
+  font-size: var(--fs-body);
+  background-color: var(--bcd-color-third);
+  cursor: pointer;
+}
+
+form .input-group option:checked {
+  background-color: var(--bcd-color-third);
+}
+
+form .input-group option::checkmark {
+  content: "";
+}
+
+/* textarea */
+form .input-group textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid var(--disactive-color);
+  background-color: var(--bcd-color-sec);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-main);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  resize: none;
+}
+
+form .input-group textarea::placeholder {
+  color: var(--text-color-sec);
+}
+
+/* form search */
+form .input-search {
+  position: relative;
+}
+
+form .input-search .input-group {
+  width: 100%;
+  height: 32px;
+  outline: 0;
+  border: 1px solid var(--disactive-color);
+  background-color: var(--bcd-color-sec);
+  border-radius: 8px;
+  padding-right: 4px;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-main);
+  box-sizing: border-box;
+}
+
+form .input-search .input-group input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-align: right;
+  width: 100%;
+}
+
+form .input-search .input-group .icons-small {
+  cursor: pointer;
+}
+
+form .input-search .search-result {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 36px;
+  min-width: 100%;
+  max-width: 350%;
+  min-height: 32px;
+  height: max-content;
+  max-height: 200px;
+  padding: 4px;
+  background-color: var(--bcd-color-sec);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--fs-body-small);
+  color: var(--text-color-sec);
+  cursor: pointer;
+  box-shadow: 4px 8px 8px rgba(140, 140, 140, 0.2);
+}
+
+/* search result */
+form .input-search .search-result .product {
+  min-width: max-content;
+  max-width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+form .input-search .search-result .product:hover {
+  background-color: var(--bcd-color-third);
+  color: var(--text-color-main);
+}
+
+/* toggle chips styling */
+.toggle-button {
+  width: 60px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: var(--disactive-color);
+  transition: 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.toggle-button.active {
+  background-color: var(--action-color);
+}
+
+.toggle-button .circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: var(--bcd-color-sec);
+  transition: 0.2s ease;
+  transform: translateX(0);
+}
+
+.toggle-button.active .circle {
+  transform: translateX(28px);
+}
+
+.container-dark .toggle-button .circle {
+  background-color: var(--text-color-opposite);
+}

@@ -1,0 +1,82 @@
+.headerPages {
+    width: 100%;
+    height: 800px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), url("../assets/main\ images.jpg");
+    color: var(--text-color-opposite);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: flex-end;
+}
+
+/* background per pages */
+.headerPages.one {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), url("../assets/about\ bcd.jpg");
+}
+
+.headerPages.two {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), url("../assets/programs\ bcd.jpg");
+}
+
+.headerPages.three {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), url("../assets/artikel\ bcd.jpg");
+}
+
+.headerPages.four {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1)), url("../assets/kontak\ bcd.jpg");
+}
+
+.headerPages h1 {
+    font-size: 64px;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--text-color-opposite);
+}
+
+.headerPages .detail {
+    padding: 24px 0;
+}
+
+.headerPages .detail .left {
+    width: 60%;
+}
+
+.headerPages .detail .left h1 {
+    padding: 0;
+    border: none;
+    /* font-size: var(--fs-heading-1); */
+}
+
+.headerPages .detail .right {
+    width: 30%;
+}
+
+/* responsive mobile */
+@media screen and (max-width: 576px) {
+    .headerPages {
+        height: 500px;
+        padding: 20px;
+    }
+
+    .headerPages h1 {
+        font-size: 24px;
+    }
+
+    .headerPages .detail {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .headerPages .detail .left {
+        width: 100%;
+    }
+
+    .headerPages .detail .right {
+        width: 100%;
+    }
+}

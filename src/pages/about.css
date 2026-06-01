@@ -1,0 +1,168 @@
+.profile-card {
+    width: 100%;
+    height: max-content;
+    background-color: var(--bcd-color-main);
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.profile-card h3 {
+    color: var(--action-color);
+}
+
+.profile-card h1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bcd-color-sec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.profile-card:hover h1 {
+    opacity: 1;
+}
+
+.purpose-card {
+    width: 50%;
+    height: 350px;
+    padding: 16px;
+    background-color: var(--bcd-color-main);
+    border: 1px solid var(--text-color-main);
+    text-align: justify;
+}
+
+/* benefit */
+.benefit {
+    width: 100%;
+    height: max-content;
+}
+
+.benefit .img {
+    width: 50%;
+    height: 700px;
+    background-image: url("../assets/about 2 bcd.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.benefit .detail {
+    width: 50%;
+}
+
+.benefit .benefit-item {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.benefit .benefit-item .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.benefit .benefit-item.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.benefit .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+    padding: 0 32px;
+}
+
+.benefit .accordion-content .inner {
+    overflow: hidden;
+}
+
+.benefit .benefit-item.active .accordion-content {
+    grid-template-rows: 1fr;
+}
+
+/* contact */
+.contact {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--bcd-linear);
+    background-position-x: 500%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+/* testimonial */
+.testimonial-card {
+    width: 100%;
+    height: 360px;
+    padding: 24px;
+    border-radius: 40px;
+    background-color: var(--bcd-color-sec);
+}
+
+.testimonial-card .icons-large {
+    color: var(--action-color);
+}
+
+
+@media screen and (max-width: 576px) {
+    .teams .profile-list {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .teams .profile-list .profile-card {
+        width: 48%;
+    }
+
+    .teams .profile-list .profile-card img {
+        height: 250px;
+    }
+
+    .purpose .purpose-list {
+        flex-direction: column;
+    }
+
+    .purpose .purpose-list .purpose-card {
+        width: 100%;
+        height: max-content;
+    }
+
+    .benefit .benefit-list {
+        flex-direction: column;
+    }
+
+    .benefit .benefit-list .img {
+        width: 100%;
+        height: 400px;
+        background-position: center;
+
+    }
+
+    .benefit .benefit-list .detail {
+        width: 100%;
+    }
+
+    .contact {
+        height: 300px;
+    }
+
+    .testimonial-list {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        height: max-content;
+    }
+}

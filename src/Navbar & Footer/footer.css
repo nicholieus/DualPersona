@@ -1,0 +1,142 @@
+footer {
+    width: 100%;
+    height: max-content;
+    padding: 24px 10%;
+    box-sizing: border-box;
+    background-color: var(--bcd-color-sec);
+    position: relative;
+}
+
+/* feedback */
+footer .feedback {
+    position: inherit;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: var(--bcd-color-main);
+}
+
+footer .feedback form {
+    width: 40%;
+}
+
+footer .feedback .socialMedia {
+    text-align: center;
+    text-transform: capitalize;
+    width: 50%;
+    position: inherit;
+}
+
+footer .feedback .socialMedia h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+footer .feedback .socialMedia img {
+    border-radius: 50%;
+}
+
+footer .feedback .socialMedia .list-profiles {
+    width: 100%;
+    height: 250px;
+    position: inherit;
+}
+
+footer .feedback .socialMedia .list-profiles a {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .feedback .socialMedia .list-profiles a:nth-child(1) {
+    left: 8%;
+    top: 0;
+}
+
+footer .feedback .socialMedia .list-profiles a:nth-child(2) {
+    left: 20%;
+    bottom: 0;
+}
+
+footer .feedback .socialMedia .list-profiles a:nth-child(4) {
+    right: 8%;
+    top: 0;
+}
+
+footer .feedback .socialMedia .list-profiles a:nth-child(5) {
+    right: 20%;
+    bottom: 0;
+}
+
+/* tagline */
+footer .tagline {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+footer .tagline h1 {
+    width: max-content;
+    font-size: 190px;
+    text-transform: capitalize;
+    position: absolute;
+    font-weight: var(--fw-regular);
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 6px 4px 8px rgba(137, 137, 137, 0.24);
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color-sec);
+}
+
+/* responsive mobile */
+@media screen and (max-width: 576px) {
+    footer .feedback {
+        flex-direction: column;
+    }
+
+    footer .feedback form {
+        width: 100%;
+        order: 2;
+    }
+
+    footer .feedback .socialMedia {
+        width: 100%;
+        order: 1;
+        margin-bottom: 40px;
+    }
+
+    footer .feedback .socialMedia h1 {
+        font-size: var(--fs-heading-2);
+    }
+
+    footer .feedback .socialMedia .list-profiles {
+        height: 200px;
+    }
+
+    footer .feedback .socialMedia .list-profiles img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer .feedback .socialMedia .list-profiles p {
+        font-size: var(--fs-body-small);
+    }
+
+    footer .tagline {
+        height: 52px;
+    }
+
+    footer .tagline h1 {
+        font-size: var(--fs-heading-1);
+    }
+
+}
